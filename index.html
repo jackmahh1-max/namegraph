@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Track how names have changed over time. Use Name Popularity Graph to see trends, peaks, and patterns in name popularity across generations, free and easy to use.">
+    <meta name="keywords" content="name popularity trends, name history graph, name frequency chart, name data visualization, baby name trends">
+    <meta name="author" content="Name Popularity Graph Team">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Name Popularity Graph – Explore Historical Name Trends">
+    <meta property="og:description" content="Track how names have changed over time. Use Name Popularity Graph to see trends, peaks, and patterns in name popularity across generations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://namegraph.vercel.app/">
+    <meta property="og:image" content="https://namegraph.vercel.app/assets/img/logo.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Name Popularity Graph – Explore Historical Name Trends">
+    <meta name="twitter:description" content="Track how names have changed over time. Use Name Popularity Graph to see trends, peaks, and patterns in name popularity across generations.">
+    
+    <title>Name Popularity Graph – Explore Historical Name Trends</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/img/logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://namegraph.vercel.app/#organization",
+        "name": "Name Popularity Graph",
+        "url": "https://namegraph.vercel.app/",
+        "logo": "https://namegraph.vercel.app/assets/img/logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "support@namegraph@gmail.com",
+          "contactType": "customer support",
+          "availableLanguage": "en"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://namegraph.vercel.app/#webpage",
+        "url": "https://namegraph.vercel.app/",
+        "name": "Name Popularity Graph – Explore Historical Name Trends",
+        "headline": "Name Popularity Graph – Explore Historical Name Trends",
+        "description": "Track how names have changed over time. Use Name Popularity Graph to see trends, peaks, and patterns in name popularity across generations.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://namegraph.vercel.app/#website",
+          "name": "Name Popularity Graph",
+          "publisher": {
+            "@id": "https://namegraph.vercel.app/#organization"
+          }
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "Name Popularity Graph"
+        },
+        "publisher": {
+          "@id": "https://namegraph.vercel.app/#organization"
+        },
+        "datePublished": "2025-10-22",
+        "dateModified": "2025-10-22",
+        "keywords": [
+          "name popularity trends",
+          "name history graph",
+          "name frequency chart",
+          "name data visualization",
+          "baby name trends"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": "https://namegraph.vercel.app/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What does the graph show?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It shows how frequently a name appeared each decade from 1950 to now."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the data official?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It's based on public datasets and presented for informational use."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I compare multiple names?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, you can input different names to visualize and compare their popularity."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Completely free and mobile-friendly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I check how many of me are there?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, there are various tools online that can help you discover how many people share your exact name."
+            }
+          }
+        ]
+      }
+    ]
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="/" class="nav-logo">
+                <i class="fas fa-chart-line"></i>
+                <span>Name Popularity Graph</span>
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="/" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="privacy-policy.html" class="nav-link">Privacy Policy</a></li>
+                    <li class="nav-item"><a href="disclaimer.html" class="nav-link">Disclaimer</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" role="button" tabindex="0">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero section">
+            <div class="container">
+                <h1 class="hero-title">Name Popularity Graph – Track How Your Name Changed Over Time</h1>
+                <p class="hero-description">
+                    Names rise and fall like waves across time. With the Name Popularity Graph, you can explore how a name's popularity has evolved from the 1950s to today. The tool visualizes how names become trends, classics, or fade into rarity. Try it below and see your name's story unfold.
+                </p>
+            </div>
+        </section>
+
+        <!-- Tool Section -->
+        <section class="tool section">
+            <div class="container">
+                <div class="tool-card">
+                    <h2 class="tool-title">Explore Name Trends</h2>
+                    
+                    <div class="tool-input-group">
+                        <label for="nameInput" class="tool-label">Enter a First Name</label>
+                        <div class="input-wrapper">
+                            <input 
+                                type="text" 
+                                id="nameInput" 
+                                class="tool-input" 
+                                placeholder="e.g., Emma, Liam, Michael..." 
+                                aria-label="Enter first name to see popularity trends"
+                            >
+                            <button id="generateBtn" class="btn btn-primary" aria-label="Generate popularity graph">
+                                <i class="fas fa-chart-area"></i>
+                                Generate Graph
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="resultSection" class="result-section" style="display: none;">
+                        <div class="result-header">
+                            <h3 class="result-name" id="resultName"></h3>
+                            <button id="resetBtn" class="btn btn-secondary">
+                                <i class="fas fa-redo"></i>
+                                Compare Another Name
+                            </button>
+                        </div>
+                        
+                        <div class="chart-container">
+                            <canvas id="popularityChart" role="img" aria-label="Name popularity trend chart"></canvas>
+                        </div>
+                        
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-arrow-trend-up"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-label">Peak Year</span>
+                                    <span class="stat-value" id="peakYear">-</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-percentage"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-label">Peak Popularity</span>
+                                    <span class="stat-value" id="peakPopularity">-</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-label">Average Score</span>
+                                    <span class="stat-value" id="avgScore">-</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-label">Current Trend</span>
+                                    <span class="stat-value" id="currentTrend">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Use Section -->
+        <section class="content-section section">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="content-text">
+                        <h2 class="section-title">How to Use the Name Popularity Graph</h2>
+                        <p class="section-description">It's simple to explore your name's timeline:</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Type any first name.</li>
+                            <li><i class="fas fa-check-circle"></i> Click Generate Graph.</li>
+                            <li><i class="fas fa-check-circle"></i> Instantly see a chart showing popularity across decades.</li>
+                            <li><i class="fas fa-check-circle"></i> Compare different names to notice trends and cultural shifts.</li>
+                        </ul>
+                        <p class="section-text">
+                            Each graph uses historical data to show how naming patterns change with generations and social trends.
+                        </p>
+                    </div>
+                    <div class="content-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What It Shows Section -->
+        <section class="content-section section bg-light">
+            <div class="container">
+                <div class="content-grid reverse">
+                    <div class="content-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-magnifying-glass-chart"></i>
+                        </div>
+                    </div>
+                    <div class="content-text">
+                        <h2 class="section-title">What It Shows</h2>
+                        <p class="section-description">The Name Popularity Graph displays:</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-star"></i> Popularity peaks by year</li>
+                            <li><i class="fas fa-star"></i> Decade-based frequency distribution</li>
+                            <li><i class="fas fa-star"></i> Long-term growth or decline in usage</li>
+                        </ul>
+                        <p class="section-text">
+                            It helps visualize why some names stay timeless while others appear only for a short era. For example, Michael peaked in the 1980s, while Olivia dominates the 2020s.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Explore Section -->
+        <section class="content-section section">
+            <div class="container">
+                <div class="content-centered">
+                    <h2 class="section-title">Why Explore Name Trends</h2>
+                    <p class="section-text">
+                        Names tell stories about culture, identity, and history. By seeing your name's journey, you understand how trends reflect fashion, language, and values.
+                    </p>
+                    <p class="section-description">People often use this tool to:</p>
+                    <div class="cards-grid">
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-baby"></i></div>
+                            <h3 class="info-title">Study Baby Name Trends</h3>
+                            <p class="info-text">Discover trending names for your newborn and understand their historical context.</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-pen-fancy"></i></div>
+                            <h3 class="info-title">Research Writing or Character Naming</h3>
+                            <p class="info-text">Find authentic names for characters based on time period and popularity.</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-users"></i></div>
+                            <h3 class="info-title">Compare Generations</h3>
+                            <p class="info-text">See how naming patterns differ across family generations.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-box">
+                        <p class="highlight-text">
+    And if you're curious about 
+    <a href="https://howmanyofmes.com" target="_blank" rel="noopener noreferrer">
+        how many of me are there
+    </a>
+    with your exact name today, you can explore that question alongside these historical trends. It's the perfect companion to this graph—one shows your name's history, the other shows its presence now.
+</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Examples Section -->
+        <section class="content-section section bg-light">
+            <div class="container">
+                <h2 class="section-title centered">Examples of Name Trends</h2>
+                <div class="examples-grid">
+                    <div class="example-card">
+                        <div class="example-header">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Emma</h3>
+                        </div>
+                        <p class="example-text">Peaked twice in 1910 and again in the 2000s.</p>
+                    </div>
+                    <div class="example-card">
+                        <div class="example-header">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Liam</h3>
+                        </div>
+                        <p class="example-text">Began rising after 2010 and remains popular today.</p>
+                    </div>
+                    <div class="example-card">
+                        <div class="example-header">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Jennifer</h3>
+                        </div>
+                        <p class="example-text">Dominated the 1980s, then gradually declined.</p>
+                    </div>
+                </div>
+                <p class="section-text centered">
+                    Each name tells a different cultural story, from timeless traditions to modern favorites.
+                </p>
+            </div>
+        </section>
+
+        <!-- About Data Section -->
+        <section class="content-section section">
+            <div class="container">
+                <div class="content-centered">
+                    <h2 class="section-title">About the Data</h2>
+                    <p class="section-text">
+                        The Name Popularity Graph uses aggregated naming data from public archives and statistical sources to visualize changes over time. Our algorithm converts that data into easy-to-read graphs for clarity and engagement.
+                    </p>
+                    <p class="section-text">
+                        Data is updated regularly to reflect the latest naming trends. The tool runs fully in your browser and doesn't collect or store any personal information.
+                    </p>
+                    <div class="meta-info">
+                        <p><strong>Last updated:</strong> October 2025</p>
+                        <p><strong>Author:</strong> Name Popularity Graph Team</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Disclaimer Section -->
+        <section class="content-section section bg-light">
+            <div class="container">
+                <div class="disclaimer-box">
+                    <i class="fas fa-info-circle"></i>
+                    <div>
+                        <h3>Disclaimer</h3>
+                        <p>The popularity results are estimates based on historical patterns. They should be used for entertainment and educational purposes only.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq section">
+            <div class="container">
+                <h2 class="section-title centered">Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3 class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            What does the graph show?
+                        </h3>
+                        <p class="faq-answer">It shows how frequently a name appeared each decade from 1950 to the present.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            Is the data official?
+                        </h3>
+                        <p class="faq-answer">It's based on public datasets and presented for informational use.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            Can I compare multiple names?
+                        </h3>
+                        <p class="faq-answer">Yes, you can input different names to visualize and compare their popularity.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            Is it free?
+                        </h3>
+                        <p class="faq-answer">Completely free and mobile-friendly.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            Does it work with all names?
+                        </h3>
+                        <p class="faq-answer">Yes, both classic and modern names display results.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            Can I check how many of me are there?
+                        </h3>
+                        <p class="faq-answer">Yes! There are various tools online that can help you discover how many people share your exact name.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-copyright">© 2025 Name Popularity Graph. All rights reserved.</p>
+                <nav class="footer-nav">
+                    <a href="/">Home</a>
+                    <span class="footer-divider">|</span>
+                    <a href="about.html">About</a>
+                    <span class="footer-divider">|</span>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <span class="footer-divider">|</span>
+                    <a href="disclaimer.html">Disclaimer</a>
+                    <span class="footer-divider">|</span>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /about.html
+Disallow: /contact.html
+Disallow: /privacy-policy.html
+Disallow: /disclaimer.html
+
+Sitemap: https://namegraph.vercel.app/sitemap.xml
